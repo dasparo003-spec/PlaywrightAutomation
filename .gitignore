@@ -1,0 +1,19 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+tests/automation.spec.js
+tests/demopractice.spec.js
+tests/eventManagement.spec.js
+tests/example.spec.js
+tests/flightbooking.spec.js
+tests/practiceAutomation.spec.js
+tests/mypracticepage.spec.js
+tests/practice.spec.js
+tests/randomPractice.spec.js
+pages/loginPage.js
+tests/array.js
