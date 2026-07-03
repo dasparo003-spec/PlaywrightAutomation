@@ -22,17 +22,18 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
-    - name: Ensure Playwright report folder exists
-      run: mkdir -p playwright-report
-    - name: Dump Playwright report files
+    - name: Show workspace contents
       run: |
-        echo "Report folder contents:"
+        echo "Working directory: $(pwd)"
+        echo "Root contents:"
+        ls -la
+        echo "Playwright report path contents:"
         ls -la playwright-report || true
-        echo "Matching files:"
+        echo "Report files:"
         find playwright-report -type f | sort || true
     - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
-        path: playwright-report
+        path: playwright-report/**
         retention-days: 30
